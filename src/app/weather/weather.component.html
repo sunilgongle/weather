@@ -1,0 +1,41 @@
+    <div class="h100 container">
+<mat-toolbar color="primary" >
+    <div class="row ">
+        <div class="col-md-9">
+          <a href="#">  <p class="title">WEATHER</p> </a>
+
+        </div>
+ 
+
+        <div class="col-md-3">
+            <input class="form-control" type="text" placeholder="Search" aria-label="Search"   [(ngModel)]="cityname" (keyup.enter)="weatherpopup()">
+        </div>
+        </div>
+        </mat-toolbar>
+
+        <br>
+        <br>
+        <div class="row" *ngIf="weatherlist.length!=0" class="sectionheight">
+
+            <div class="col-md-4 col-sm-6 despbox col-md-offset-2" *ngFor="let W of weatherlist" (click)="remove()">
+                <h4>Weather in {{W?.name}},  {{W?.sys?.country}}</h4>
+                <img class="dinline" src="https://openweathermap.org/img/wn/09d@2x.png"> 
+                    <h4 class="dinline">{{W?.main?.temp}}°C</h4>
+                <h5>{{W?.weather[0]?.description}}</h5>
+                <p class="fright"> Today</p>
+            </div>
+
+        </div>
+
+
+        <div class="center" *ngIf="weatherlist.length==0">
+
+        <div>
+           <h1> Type the city name <img src="../../assets/img/finger.png" width="45px"> to search </h1>
+           <p>Weather is the state of the atmosphere, describing for example the degree to<br>
+            which it is hot or cold, wet or dry, calm or stormy, clear or cloudy.</p>
+
+        </div>
+        </div>
+    
+    </div>

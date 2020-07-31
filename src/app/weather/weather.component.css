@@ -1,0 +1,111 @@
+.row{
+    width: 100%;
+}
+
+.title{
+    color: white;
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+input{
+    padding: 10px 10px 10px 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+h1{
+    color: white;
+}
+
+.center{
+    height: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.center p{
+    color: white;
+}
+
+.h100{
+    height: 100%;
+}
+mat-toolbar{
+    background-color: transparent!important;
+    z-index: 1;
+}
+
+.despbox{
+    background-color: white;
+    padding: 10px 20px 20px 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+.dinline{
+    display: inline;
+}
+
+/* @media only screen and (min-width:960px){
+    .despbox{
+        max-width: 326px;
+    } 
+ }
+  */
+@media only screen and (min-width:978px){
+   .despbox{
+       max-width: 283px;
+   } 
+}
+
+.close{
+  width: 15px;
+
+}
+
+.fright{
+    float: right;
+    font-size: 10px;
+}
+.ccontent, button{
+    text-align: center;
+}
+
+button{
+    background-color: rgb(94 119 255);
+    color: white;
+    margin: auto;
+    outline: none;
+    border: none;
+}
+
+.warn{
+    max-width: 30px;
+}
+
+.sectionheight{
+    max-height: 400px!important;
+    overflow: scroll;
+}
+::-webkit-scrollbar {
+    width: 0em;
+
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+td{
+    text-align: left;
+    width: 50%
+}
+tr{
+    width: 60%;
+}
+table{
+    margin: auto;
+}

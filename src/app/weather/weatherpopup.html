@@ -1,0 +1,71 @@
+<div *ngIf="data.weatherdata.error!=true" class="ccontent">
+    <img src="../../assets/img/close.png" class="close" (click)="onNoClick()">
+<h2 mat-dialog-title style="text-align: center;">Weather in  {{data?.weatherdata?.name}}, {{data?.weatherdata?.sys.country}}</h2>
+<div mat-dialog-content>
+    <img class="dinline" src="https://openweathermap.org/img/wn/09d@2x.png"> 
+    <h4 class="dinline">{{data?.weatherdata?.main?.temp}}°C</h4>
+    <table>
+        <tr>
+            <td>
+            ⚫ Wind
+            </td>
+            
+            <td>
+                {{data?.weatherdata?.wind.speed}}m/s, {{data?.weatherdata?.wind.deg}}°
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+            ⚫ Humidity
+            </td>
+            
+            <td>
+                {{data?.weatherdata?.main.humidity}}%
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+            ⚫ Pressure
+            </td>
+            
+            <td>
+                {{data?.weatherdata?.main.pressure}}hpa
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+            ⚫ Sunrise
+            </td>
+            
+            <td>
+                {{data?.weatherdata?.sys.sunrise}}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+            ⚫ Sunset
+            </td>
+            
+            <td>
+                {{data?.weatherdata?.sys.sunset}}
+            </td>
+        </tr>
+
+
+    </table>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="closing()" mat-raised-button >Add</button>
+</div><br>
+</div>
+
+<div *ngIf="data.weatherdata.error==true" class="ccontent">
+    <img src="../../assets/img/alert.png" class="warn"><br>
+   Couldn't find  <b>{{dialogdata.weatherdata.city}}</b>
+    <br>Please try another keyword<br><br>
+    <button mat-raised-button (click)="onNoClick()">Okay</button> 
+</div>
